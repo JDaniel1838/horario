@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+    <title>Horario</title>
+</head>
+<body>
+
+    <div class="cargaInicio animate__animated">
+        <img src="iconCarga.svg" alt="iconCarga">
+        <p class="InicioText">Cargando tu horario</p>
+    </div>
+
+    <header>
+        <img src="logo.svg" alt="Logo Horario">
+        <h4>HORARIO</h4>
+    </header>
+
+    <div class="ContenedorPrincipal">
+        <div class="FechaYHora">
+            <p class="fecha"><span class="diaTitle">34</span> de <span class="mes">23</span> del <span class="año">1990</p>
+            <p class="horahoy"><span class="hora">0</span> : <span class="minutos">23</span> : <span class="segundos">23 </span> <span class="AM">AM</span></p>
+            <div class="Botones">
+                <button class="AgregarTareas">Agregar Tarea</button>
+                <button class="EliminarBotones">Eliminar Tarea</button>
+                <button class="MostrarOrario">Mostrar Orario</button>
+                <button class="ModoNocturno">Modo Nocturno</button>
+            </div>
+        </div>
+
+
+        <div class="activity-content">
+            <div class="TarjetaContendora">
+                <p class="DiaLetra"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content animate__animated">
+        <div class="dias">
+            <h3>Hora</h3>
+            <p>9:00 am</p>
+            <p>10:00 am</p>
+            <p>11:00 am</p>
+            <p>12:00 pm</p>
+            <p>1:00 pm</p>
+            <p>2:00 pm</p>
+            <p>3:00 pm</p>
+            <p>4:00 pm</p>
+            <p>5:00 pm</p>
+            <p>6:00 pm</p>
+            <p>7:00 pm</p>
+            <p>8:00 pm</p>
+            <p>9:00 pm</p>
+            <p>10:00 pm</p>
+            <p>11:00 pm</p>
+        </div>
+        <div class="lunes">
+            <h3>Lunes</h3>
+            <p class="lunes-9am" data-hora="9am" data-dia="Lunes"></p>
+            <p class="lunes-10am"data-hora="10am"data-dia="Lunes"></p>
+            <p class="lunes-11am"data-hora="11am"data-dia="Lunes"></p>
+            <p class="lunes-12am"data-hora="12am"data-dia="Lunes"></p>
+            <p class="lunes-1pm" data-hora="1pm" data-dia="Lunes"></p>
+            <p class="lunes-2pm" data-hora="2pm" data-dia="Lunes"></p>
+            <p class="lunes-3pm" data-hora="3pm" data-dia="Lunes"></p>
+            <p class="lunes-4pm" data-hora="4pm" data-dia="Lunes"></p>
+            <p class="lunes-5pm" data-hora="5pm" data-dia="Lunes"></p>
+            <p class="lunes-6pm" data-hora="6pm" data-dia="Lunes"></p>
+            <p class="lunes-7pm" data-hora="7pm" data-dia="Lunes"></p>
+            <p class="lunes-8pm" data-hora="8pm" data-dia="Lunes"></p>
+            <p class="lunes-9pm" data-hora="9pm" data-dia="Lunes"></p>
+            <p class="lunes-10pm"data-hora="10pm"data-dia="Lunes"></p>
+            <p class="lunes-11pm"data-hora="11pm"data-dia="Lunes"></p>
+        </div>
+
+        <div class="martes">
+            <h3>Martes</h3>
+            <p class="martes-9am" data-hora="9am" data-dia="Martes"></p>
+            <p class="martes-10am"data-hora="10am"data-dia="Martes"></p>
+            <p class="martes-11am"data-hora="11am"data-dia="Martes"></p>
+            <p class="martes-12am"data-hora="12am"data-dia="Martes"></p>
+            <p class="martes-1pm" data-hora="1pm" data-dia="Martes"></p>
+            <p class="martes-2pm" data-hora="2pm" data-dia="Martes"></p>
+            <p class="martes-3pm" data-hora="3pm" data-dia="Martes"></p>
+            <p class="martes-4pm" data-hora="4pm" data-dia="Martes"></p>
+            <p class="martes-5pm" data-hora="5pm" data-dia="Martes"></p>
+            <p class="martes-6pm" data-hora="6pm" data-dia="Martes"></p>
+            <p class="martes-7pm" data-hora="7pm" data-dia="Martes"></p>
+            <p class="martes-8pm" data-hora="8pm" data-dia="Martes"></p>
+            <p class="martes-9pm" data-hora="9pm" data-dia="Martes"></p>
+            <p class="martes-10pm"data-hora="10pm"data-dia="Martes"></p>
+            <p class="martes-11pm"data-hora="11pm"data-dia="Martes"></p>
+        </div>
+        <div class="miercoles">
+            <h3>Miercoles</h3>
+            <p class="miercoles-9am" data-hora="9am" data-dia="Miercoles"></p>
+            <p class="miercoles-10am"data-hora="10am"data-dia="Miercoles"></p>
+            <p class="miercoles-11am"data-hora="11am"data-dia="Miercoles"></p>
+            <p class="miercoles-12am"data-hora="12am"data-dia="Miercoles"></p>
+            <p class="miercoles-1pm" data-hora="1pm" data-dia="Miercoles"></p>
+            <p class="miercoles-2pm" data-hora="2pm" data-dia="Miercoles"></p>
+            <p class="miercoles-3pm" data-hora="3pm" data-dia="Miercoles"></p>
+            <p class="miercoles-4pm" data-hora="4pm" data-dia="Miercoles"></p>
+            <p class="miercoles-5pm" data-hora="5pm" data-dia="Miercoles"></p>
+            <p class="miercoles-6pm" data-hora="6pm" data-dia="Miercoles"></p>
+            <p class="miercoles-7pm" data-hora="7pm" data-dia="Miercoles"></p>
+            <p class="miercoles-8pm" data-hora="8pm" data-dia="Miercoles"></p>
+            <p class="miercoles-9pm" data-hora="9pm" data-dia="Miercoles"></p>
+            <p class="miercoles-10pm"data-hora="10pm"data-dia="Miercoles"></p>
+            <p class="miercoles-11pm"data-hora="11pm"data-dia="Miercoles"></p>
+        </div>
+        <div class="jueves">
+            <h3>Jueves</h3>
+            <p class="jueves-9am" data-hora="9am" data-dia="Jueves"></p>
+            <p class="jueves-10am" data-hora="10am"data-dia="Jueves"></p>
+            <p class="jueves-11am" data-hora="11am"data-dia="Jueves"></p>
+            <p class="jueves-12am" data-hora="12am"data-dia="Jueves"></p>
+            <p class="jueves-1pm" data-hora="1pm" data-dia="Jueves"></p>
+            <p class="jueves-2pm" data-hora="2pm" data-dia="Jueves"></p>
+            <p class="jueves-3pm" data-hora="3pm" data-dia="Jueves"></p>
+            <p class="jueves-4pm" data-hora="4pm" data-dia="Jueves"></p>
+            <p class="jueves-5pm" data-hora="5pm" data-dia="Jueves"></p>
+            <p class="jueves-6pm" data-hora="6pm" data-dia="Jueves"></p>
+            <p class="jueves-7pm" data-hora="7pm" data-dia="Jueves"></p>
+            <p class="jueves-8pm" data-hora="8pm" data-dia="Jueves"></p>
+            <p class="jueves-9pm" data-hora="9pm" data-dia="Jueves"></p>
+            <p class="jueves-10pm" data-hora="10pm"data-dia="Jueves"></p>
+            <p class="jueves-11pm" data-hora="11pm"data-dia="Jueves"></p>
+        </div>
+        <div class="viernes">
+            <h3>Viernes</h3>
+            <p class="viernes-9am" data-hora="9am" data-dia="Viernes"></p>
+            <p class="viernes-10am"data-hora="10am"data-dia="Viernes"></p>
+            <p class="viernes-11am"data-hora="11am"data-dia="Viernes"></p>
+            <p class="viernes-12am"data-hora="12am"data-dia="Viernes"></p>
+            <p class="viernes-1pm" data-hora="1pm" data-dia="Viernes"></p>
+            <p class="viernes-2pm" data-hora="2pm" data-dia="Viernes"></p>
+            <p class="viernes-3pm" data-hora="3pm" data-dia="Viernes"></p>
+            <p class="viernes-4pm" data-hora="4pm" data-dia="Viernes"></p>
+            <p class="viernes-5pm" data-hora="5pm" data-dia="Viernes"></p>
+            <p class="viernes-6pm" data-hora="6pm" data-dia="Viernes"></p>
+            <p class="viernes-7pm" data-hora="7pm" data-dia="Viernes"></p>
+            <p class="viernes-8pm" data-hora="8pm" data-dia="Viernes"></p>
+            <p class="viernes-9pm" data-hora="9pm" data-dia="Viernes"></p>
+            <p class="viernes-10pm"data-hora="10pm"data-dia="Viernes"></p>
+            <p class="viernes-11pm"data-hora="11pm"data-dia="Viernes"></p>
+        </div>
+        <div class="sabado">
+            <h3>Sabado</h3>
+            <p class="sabado-9am" data-hora="9am" data-dia="Sabado"></p>
+            <p class="sabado-10am"data-hora="10am"data-dia="Sabado"></p>
+            <p class="sabado-11am"data-hora="11am"data-dia="Sabado"></p>
+            <p class="sabado-12am"data-hora="12am"data-dia="Sabado"></p>
+            <p class="sabado-1pm" data-hora="1pm" data-dia="Sabado"></p>
+            <p class="sabado-2pm" data-hora="2pm" data-dia="Sabado"></p>
+            <p class="sabado-3pm" data-hora="3pm" data-dia="Sabado"></p>
+            <p class="sabado-4pm" data-hora="4pm" data-dia="Sabado"></p>
+            <p class="sabado-5pm" data-hora="5pm" data-dia="Sabado"></p>
+            <p class="sabado-6pm" data-hora="6pm" data-dia="Sabado"></p>
+            <p class="sabado-7pm" data-hora="7pm" data-dia="Sabado"></p>
+            <p class="sabado-8pm" data-hora="8pm" data-dia="Sabado"></p>
+            <p class="sabado-9pm" data-hora="9pm" data-dia="Sabado"></p>
+            <p class="sabado-10pm"data-hora="10pm"data-dia="Sabado"></p>
+            <p class="sabado-11pm"data-hora="11pm"data-dia="Sabado"></p>
+        </div>
+        <div class="domingo">
+            <h3>Domingo</h3>
+            
+            <p class="domingo-9am" data-hora="9am" data-dia="Domingo"></p>
+            <p class="domingo-10am"data-hora="10am"data-dia="Domingo"></p>
+            <p class="domingo-11am"data-hora="11am"data-dia="Domingo"></p>
+            <p class="domingo-12am"data-hora="12am"data-dia="Domingo"></p>
+            <p class="domingo-1pm" data-hora="1pm" data-dia="Domingo"></p>
+            <p class="domingo-2pm" data-hora="2pm" data-dia="Domingo"></p>
+            <p class="domingo-3pm" data-hora="3pm" data-dia="Domingo"></p>
+            <p class="domingo-4pm" data-hora="4pm" data-dia="Domingo"></p>
+            <p class="domingo-5pm" data-hora="5pm" data-dia="Domingo"></p>
+            <p class="domingo-6pm" data-hora="6pm" data-dia="Domingo"></p>
+            <p class="domingo-7pm" data-hora="7pm" data-dia="Domingo"></p>
+            <p class="domingo-8pm" data-hora="8pm" data-dia="Domingo"></p>
+            <p class="domingo-9pm" data-hora="9pm" data-dia="Domingo"></p>
+            <p class="domingo-10pm"data-hora="10pm"data-dia="Domingo"></p>
+            <p class="domingo-11pm"data-hora="11pm"data-dia="Domingo"></p>
+        </div>
+        <button class="closeHours">X</button>
+    </div>
+
+    <div class="form animate__animated">
+        <h4>Cambiar Actividades <img class="Cerrar" src="X.svg" alt="cerrarFormulario"></h4>
+        <p class="dia">Lunes 7am</p>
+        <input class="placeholder" type="text" placeholder="No tienes actividades Programadas" maxlength="30">
+        <button class="ButtonSubmit">Actualizar</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

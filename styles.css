@@ -1,0 +1,772 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+:root{
+    --azulbajo: #00bcd4;
+    --azulFuerte: #1089ff;
+    --turquesa:#0e9ba0;
+    --amarillo:#ff9642;
+    --rosa: #cc0e74;
+    --naranaj: #ee6f57;
+    --AzulMiercoles:#00bcd4;
+}
+
+html{
+    overflow-x: hidden;
+    font-size: 15px;
+}
+
+body{
+    position: relative;
+    background-image: linear-gradient(to top, hsla(267, 86%, 22%, 0.356) 0%, hsla(180, 63%, 50%, 0.582) 100%), url(FondoDia.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    max-width: 1400px;
+}
+
+.content {
+    width: 90%;
+    height: auto;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    margin: 0 auto 1rem auto;
+    flex-direction: row;
+    justify-content: start;
+    position: fixed;
+    z-index: 20;
+    top: 20px;
+    left: 5rem;
+    right: auto;
+}
+
+.content.activado{
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    transition: .2s;
+}
+
+.content > div{
+    width: 11.5%;
+    text-align: center;
+}
+
+/*Boton Close Horario*/
+.closeHours{
+    width: 6%;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: 4.7rem;
+    background: #00c6ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color:#f0f0f0;
+    border-radius: 50%;
+    transition: .2s;
+    outline: none;
+    border: 1px solid #f0f0f0;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.closeHours:hover{
+    font-size: 3.5rem;
+    background: #4776E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8E54E9, #4776E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.432);
+}
+
+header{
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+header>img{
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: .75rem 1rem 0 3rem;
+}
+
+header >h4{
+    margin: .85rem 0 0 0;
+    font-size: 2.75rem;
+    color:#ffffff;
+}
+
+.ContenedorPrincipal{
+    width: 100%;
+    height: 36rem;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.FechaYHora{
+    width: 60%;
+    height: 100%;
+}
+
+
+.FechaYHora>.fecha{
+    text-align: center;
+    font-size: 4.5rem;
+    color: #fdfdfd;
+    margin-top: .7rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.FechaYHora>.horahoy{
+    text-align: center;
+    font-size: 6.3rem;
+    color: #ffffff;
+    margin-top: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+
+
+/*Contenedor de Actidades*/
+.activity-content{
+    width: 30%;
+    height: 90%;
+    margin: auto;
+    margin-top: 0;
+    background-image: linear-gradient(120deg, hsla(78, 96%, 73%, 0.753) 0%, hsla(128, 62%, 75%, 0.623) 100%);
+    border-radius: 10px;
+    transition: .2s;
+    overflow: auto;
+}
+
+.activity-content:hover{
+    background-image: linear-gradient(120deg, hsla(78, 96%, 73%, 0.764) 0%, hsla(128, 62%, 75%, 0.633) 100%);
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.432);
+}
+
+/*Decoracion Scroll*/
+.activity-content::-webkit-scrollbar{
+    width: .8rem;
+    height: 1rem;
+    border-radius: 10px;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.activity-content::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #2af598;
+}
+
+.activity-content >p{
+    font-size: 1.3rem;
+    
+}
+
+.DiaLetra{
+    text-align: center;
+    font-size: 3.5rem;
+    color: #f0f0f0;
+    font-weight: 600;
+    margin-top: .2rem;
+    margin-bottom: 1.7rem;
+}
+
+.TarjetaContendora >div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+    justify-content:space-evenly;
+    margin-bottom: .3rem;
+    transition: .2s;
+}
+
+.TarjetaContendora >div:hover> *{
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.432);
+}
+
+.TarjetaContendora >div > span{
+    width: 30%;
+    height: 4.6rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to right, hsla(193, 100%, 50%, 0.596) 0%, hsla(193, 100%, 50%, 0.397) 100%);
+    border-radius: 8px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+}
+
+.TarjetaContendora >div > p{
+    width: 60%;
+    height: 4.6rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to right, hsla(193, 100%, 50%, 0.596) 0%, hsla(193, 100%, 50%, 0.397) 100%);
+    padding: auto;
+    border-radius: 8px;
+    color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: .2s;
+}
+
+/*Estilos de botones Tareas*/
+.Botones{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 4rem;
+    
+}
+
+.Botones> button{
+    padding: 0.4rem .7rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 5px;
+    outline:none;
+    color:#f0f0f0;
+    transition: .6s;
+    border: .5px solid #272727;
+}
+
+.Botones> button:focus{
+    border: .5px solid #d1d1d1;
+}
+
+.AgregarTareas{
+    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);}
+
+.EliminarBotones{
+    background-image: linear-gradient(to right, #00dbde 0%, hsla(299, 98%, 50%, 0.644) 100%);
+}
+
+.ModoNocturno{
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+
+.MostrarOrario{
+    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);}
+/*
+ESTILOS HORARIO
+*/
+
+.dias{
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dias>h3{
+    width: 100%;
+    height: 2rem;
+    background-color: var(--turquesa);
+    color: rgb(223, 223, 223);
+    border-bottom: 4px solid #32e0c4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.dias >p{
+    width: 100%;
+    height: 2.5rem;
+    background-color: hsla(192, 100%, 63%, 0.692);
+    border-bottom:.1rem solid #07689f ;
+    border-radius: 0 2px 0px 2px;
+    color:#012549;
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+}
+
+.dias>p:hover{
+    background-color: hsla(192, 100%, 63%, 0.856);
+    color: #f0f0f0;
+}
+
+.lunes>h3{
+    width: 100%;
+    height: 2rem;
+    background-color: var(--amarillo);
+    color: rgb(243, 243, 243);
+    border-bottom: 4px solid #ffefa0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.lunes >p{
+    width: 100%;
+    height: 2.5rem;
+    background-color: #ffd57e;
+    border-radius: 0 2px 0px 2px;
+    color:#bd5500;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: .1rem solid var(--amarillo);
+    font-size: 1rem;
+    transition: .2s;
+}
+
+.lunes>p:hover{
+    background-color: #fac04d;
+}
+
+.martes>h3{
+    width: 100%;
+    height: 2rem;
+    background-color: var(--rosa);
+    color: rgb(243, 243, 243);
+    border-bottom: 4px solid #e6739f;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.martes >p{
+    width: 100%;
+    height: 2.5rem;
+    background-color: #f1d4d4;
+    border-radius: 0 2px 0px 2px;
+    color:#790c5a;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: .1rem solid var(--rosa);
+    transition: .2s;
+}
+
+.martes>p:hover{
+    background-color: #f7b2b2;
+
+}
+
+
+.miercoles >h3{
+    width: 100%;
+    height: 2rem;
+    background-color: var(--naranaj);
+    color: rgb(243, 243, 243);
+    border-bottom: 4px solid #e74008;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.miercoles >p{
+    width: 100%;
+    height: 2.5rem;
+    background-color: #fff4eb;
+    border-radius: 0 2px 0px 2px;
+    color:#f77a4c;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: .1rem solid var(--naranaj);
+    transition: .2s;
+}
+
+.miercoles > p:hover{
+    background-color: #fddcc1;
+}
+
+.jueves >h3{
+    width: 100%;
+    height: 2rem;
+    background-color: #07689f;
+    color: rgb(243, 243, 243);
+    border-bottom: 4px solid var(--AzulMiercoles);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.jueves >p{
+    width: 100%;
+    height: 2.5rem;
+    background-color: #bbe1fa;
+    border-radius: 0 2px 0px 2px;
+    color:#3282b8;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: .1rem solid var(--azulFuerte);
+}
+
+.jueves > p:hover{
+    background-color: #82cdff;
+}
+
+
+.viernes >h3{
+    width: 100%;
+    height: 2rem;
+    background-color: #590995;
+    color: rgb(243, 243, 243);
+    border-bottom: 4px solid #892cdc;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.viernes >p{
+    width: 100%;
+    height: 2.5rem;
+    background-color: #dfafff;
+    border-radius: 0 2px 0px 2px;
+    color:#52057b;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: .1rem solid #892cdc;
+}
+
+.viernes >p:hover{
+    background-color: #cf86ff;
+}
+
+
+.sabado >h3{
+    width: 100%;
+    height: 2rem;
+    background-color: #04ad48;
+    color: rgb(243, 243, 243);
+    border-bottom: 4px solid #00e059;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.sabado >p{
+    width: 100%;
+    height: 2.5rem;
+    background-color: #81eeac;
+    border-radius: 0 2px 0px 2px;
+    color:#004400;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: .1rem solid #04ad48;
+    transition: .2s;
+}
+
+.sabado > p:hover{
+    background-color: #34e67b;
+}
+
+
+.domingo >h3{
+    width: 100%;
+    height: 2rem;
+    background-color: #734046;
+    color: rgb(243, 243, 243);
+    border-bottom: 4px solid #ba7967;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.domingo >p{
+    width: 100%;
+    height: 2.5rem;
+    background-color: #ead6ba;
+    border-radius: 0 2px 0px 2px;
+    color:#321f28;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: .1rem solid #ba7967;
+    transition: .2s;
+}
+
+.domingo > p:hover{
+    background-color: #e7b670;
+}
+
+
+
+/*Esta clase solo se le va a aplicar al dia en el que estemos*/
+.diaHoy >h3{
+    width: 100%;
+    height: 2rem;
+    background-color: #e6e6e6;
+    color: rgb(39, 39, 39);
+    border-bottom: 4px solid #acacac;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.diaHoy >p{
+    width: 100%;
+    height: 3.5rem;
+    background-color: #fcfcfc;
+    border-radius: 0 2px 0px 2px;
+    color:#321f28;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: .1rem solid #000000;
+}
+
+.Pendientes{
+    margin: 1rem auto 1.5rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+h2{
+    font-size: 2.5rem;
+    color: #00bcd4;
+    text-align: center;
+}
+
+
+/*Estilos del formulario*/
+.form{
+    width: 80%;
+    height: auto;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 1rem 2rem 1rem;
+    margin: 2rem auto;
+    text-align: center;
+    border: 1px solid #2fd0d0;
+    border-radius: 8px;
+    position: fixed;
+    background-image: linear-gradient(to top, hsla(180, 63%, 50%, 0.671) 0%, hsla(267, 86%, 22%, 0.5) 100%), url(horario.jpg);
+    background-position: initial;
+    background-size: cover;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    z-index: 40;
+}
+
+.form.active{
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    top: 100px;
+    left: 10rem;
+    right: auto;
+}
+
+h4{
+    font-size: 4.5rem;
+    color: #eeeeee;
+    font-weight: 600;
+}
+
+.dia{
+    font-size: 3.5rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.Cerrar{
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.5rem;
+    transition: .2s ease-in;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Cerrar:hover{
+    background-color: hsl(0, 0%, 100%);
+
+}
+
+.placeholder{
+    border-radius: 4px;
+    border: 2px solid #32e07a;
+    width: 80%;
+    font-size: 2.2rem;
+    outline: none;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
+.ButtonSubmit{
+    font-size: 1.7rem;
+    width: 13rem;
+    text-align: center;
+    margin: 3rem auto;
+    color: #fff4eb;
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    border: 0;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .5s step-end;
+}
+
+.ButtonSubmit:hover{
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+
+/*Estilos de icon de inicio*/
+.cargaInicio{
+    width: 100%;
+    height: 100vh;
+    background-color: hsla(0, 0%, 99%, 0.986);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.cargaInicio > img{
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.InicioText{
+    color: #00d3ac;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+
+.cargaInicio.desavilidado{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
+
+
+
+/*EStilos Responsive */
+
+
+@media screen and (max-width: 1230px){
+    html{
+        font-size: 13px;
+    }
+}
+
+
+@media screen and (max-width: 1024px){
+    html{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 820px){
+    html{
+        font-size: 11px;
+    }
+}
+
+
+@media screen and (max-width: 793px){
+    html{
+        font-size: 9px;
+    }
+
+    
+.ContenedorPrincipal{
+    flex-wrap: wrap;
+
+}
+
+.FechaYHora{
+    width: 90%;
+
+}
+
+.activity-content{
+    width: 80%;
+    margin:  0 auto;
+    overflow: auto;
+}
+
+}
+
+@media screen and (max-width: 820px){
+    html{
+        font-size: 7px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    html{
+        font-size: 5px;
+    }
+
+    .Botones{
+        margin-top: 6rem;
+        
+    }
+    
+    .Botones> button{
+        padding: 0.6rem 1rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+        border-radius: 5px;
+        border: .3px solid #272727;
+    }
+}
